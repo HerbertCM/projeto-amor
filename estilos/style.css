@@ -20,3 +20,79 @@
     margin: 0px;
     padding: 0px;
 }
+
+body{
+    background-color: black;
+}
+
+/*Cabeçalho*/
+
+header{
+    background-color: black;
+    box-shadow: 0px 5px 5px var(--cor4);
+    border-bottom: 1px solid var(--cor0);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div#marca{ 
+    padding: 10px;
+    width: 210px;
+}
+
+header div#span{
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+header h1{
+    font-family: 'titulo', Arial, Helvetica, sans-serif;
+    font-size: 2.2em;
+    color: var(--cor4);
+    text-align: left;
+}
+
+header p{
+    font-family: 'Caladea',Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    color: white;
+    text-align: right;
+}
+
+header span{
+    color: white;
+}
+
+/*Menu*/
+
+nav#menu{
+    display: none;
+    flex: 1 1 100vw;
+}
+
+nav#menu ul{
+    color: white;
+    border: 1px solid var(--cor0);
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+nav#menu li{
+    text-align: center;
+    padding: 8px;
+    border: 1px solid var(--cor0);
+}
+
+nav#menu a{
+    text-decoration: none;
+    background-color: #33152272;
+    color: white;
+}
+
+nav#menu a:hover{
+    text-shadow: 0px 0px 2px white;
+    background-color: #331522c5;
+    transition: background-color .3s, text-shadow .3s;
+}
