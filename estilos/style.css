@@ -123,6 +123,7 @@ div#intro h1{
     text-shadow: 0px 0px 1px var(--cor4);
     width: 300px;
     padding-bottom: 10px;
+    transition: font-size .3s;
 }
 
 div#intro p{
@@ -130,6 +131,7 @@ div#intro p{
     font-family: 'Caladae', Georgia, 'Times New Roman', Times, serif;
     font-size: .7em;
     width: 300px;
+    transition: font-size .3s;
 }
 
 /*Corpo Sobre mim*/
@@ -162,6 +164,7 @@ div.conteudo p{
     font-size: .7em;
     padding: 15px;
     margin-bottom: 20px;
+    transition: font-size .3s;
 }
 
 div.conteudo img{
@@ -170,6 +173,7 @@ div.conteudo img{
     border-radius: 10px;
     height: 225px;
     width: 150px;
+    transition: width .3s, height .3s;
 }
 
 /*Titulos*/
@@ -179,6 +183,7 @@ div.titulos{
     justify-content: center;
     align-items: center;
     padding: 50px 0px;
+    transition: font-size .3s;
 }
 
 div.titulos h1{
@@ -225,6 +230,7 @@ div.meus-objetivos p{
     font-size: .8em;
     text-indent: 20px;
     padding: 20px;
+    transition: font-size .3s;
 }
 
 /*Aumentar*/
@@ -261,6 +267,7 @@ div.seus-objetivos p{
     font-size: .8em;
     padding: 5px;
     text-align: center;
+    transition: font-size .3s;
 }
 
 div.seus-objetivos div:hover{
@@ -278,7 +285,7 @@ div.contatos{
 }
 
 div.contatos div{
-    flex: 0 0 50px;
+    flex: 1 0 50px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -287,6 +294,7 @@ div.contatos div{
     background-image: linear-gradient(to left, var(--cor0), var(--cor0),var(--cor0), var(--cor2));
     box-shadow: 0px 0px 5px #c993abb1;
     border-radius: 10px;
+    transition: width .3s;
 }
 
 div.contatos div:hover{
@@ -305,6 +313,7 @@ div.contatos img{
 div.contatos p{
     padding: 10px;
     font-size: .8em;
+    transition: font-size .3s;
 }
 
 div.contatos a{
@@ -322,4 +331,36 @@ footer{
 footer p{
     text-align: center;
     font-size: .6em;
+}
+
+/*Tablets*/
+
+@media screen and (min-width: 500px) {
+    
+    /*Tamanho das letras*/
+
+    div#intro p, div.conteudo p, div.meus-objetivos p, div.contatos p{
+        font-size: .9em;
+        transition: font-size .3s;
+    }
+
+    div#intro h1, div.titulos h1{
+        font-size: 2.2em;
+        transition: font-size .3s;
+    }
+
+    /*Tamanho das fotos*/
+
+    div.conteudo img{
+        width: 225px;
+        height: 337.5px;
+        transition: width .3s, height .3s;
+    }
+
+    /*Contatos tamanho*/
+
+    div.contatos div{
+        width: 400px;
+        transition: width .3s;
+    }
 }
