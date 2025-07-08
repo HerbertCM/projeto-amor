@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+/*Versão telas médias*/
+
+@media screen and (min-width: 800px) {
+    
+    /*menu*/
+
+    nav#menu{
+        display: block;
+    }
+
+    nav#menu ul{
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        border: none;
+        list-style-type: none;
+        font-size: .9em;
+    }
+
+    nav#menu a{
+        flex: 1 1 180px;
+        margin: 0px 20px;
+    }
+
+    nav#menu li{
+        padding: 3px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    div#span{
+        display: none;
+    }
+
+    /*Corpo sobre mim*/
+
+    div.detalhes{
+        margin-bottom: 100px;
+    }
+
+    div.detalhes h2{
+        font-size: 1.8em;
+        padding-bottom: 70px;
+    }
+
+    div.detalhes div.conteudo{
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    div.conteudo p{
+        flex: 0 0 400px;
+        font-size: 1em;
+        text-indent: 10px;
+    }
+
+    p#inverter{
+        order: 1;
+    }
+    
+    img#inverter{
+        order: 0;
+    }
+
+    /*Juntos*/
+
+    div.junto{
+        display: flex;
+        flex-flow: row nowrap;
+        border: 1px solid var(--cor0);
+        background-color: #33152236;
+        box-shadow: inset 0px 0px 5px #c993ab79;
+    }
+
+    div.junto div#esquerda{
+        flex-basis: 50%;
+        border-right: 2px solid var(--cor0);
+    }
+
+    div.junto div#direita{
+        flex-basis: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: center;
+    }
+
+    div#aumentar{
+        padding-top: 50px;
+    }
+
+    /*Meus objetivos*/
+
+    div.meus-objetivos div{
+        margin: 30px;
+    }
+
+    /*Seus objetivos*/
+
+    div.seus-objetivos{
+        flex-flow: column nowrap;
+        height: 100%;
+    }
+
+    div.seus-objetivos div{
+        flex: 0 0 150px;
+        margin: 50px;
+    }
+
+    div.seus-objetivos p{
+        font-size: .9em;
+    }
+
+
+    /*Contatos*/
+
+    div.contatos{
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+
+    div.contatos div{
+        width: 200px;
+        flex-flow: column nowrap;
+        background-image: linear-gradient(to top, var(--cor0), var(--cor0), var(--cor2));
+    }
+
+    div.contatos img{
+        height: 50px;
+        width: 50px;
+    }
+
+}
+
+/*Telas grandes*/
+
+@media screen and (min-width: 1000px) {
+   
+    /*Corpo Introdução*/
+
+    div#intro{
+        border-radius: 0px 0px 10px 10px;
+        margin: auto;
+        width: 1000px;
+        transition: width .3s;
+    }
+
+    /*Corpo sobre mim*/
+
+    div.detalhes{
+        margin: auto;
+        margin-top: 100px;
+        width: 1000px;
+    }
+
+    div.detalhes p{
+        font-size: 1.2em;
+        line-height: 1.3em;
+    }
+
+    div.detalhes img{
+        width: 300px;
+        height: 450px;
+    }
+
+    /*Juntando as partes*/
+
+    div.junto{
+        margin: auto;
+        width: 1000px;
+        border-radius: 10px;
+        transition: width .3s;     
+    }
+
+    /*Contatos*/
+
+    div.contatos div{
+        width: 300px;
+    }
+
+}
+
+/*Detalhes para telas gigantes*/
+
+@media screen and (min-width: 1200px){
+    
+    /*Corpo Introdução*/
+
+    div#intro{
+        border-radius: 0px 0px 10px 10px;
+        margin: auto;
+        width: 1100px;
+        transition: width .3s;
+    }
+
+    /*Juntando as partes*/
+
+    div.junto{
+        width: 1100px;
+        transition: width .3s;
+    }
+}

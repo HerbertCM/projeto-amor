@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica Karine</title>
     <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body oresize="clicou">
@@ -22,6 +23,9 @@
 
         <nav id="menu">
             <ul>
+                <a href="#">
+                    <li style="background-color: #331522; text-shadow: 0px 0px 2px white;">Home</li>
+                </a>
                 <a href="#">
                     <li>Minha História</li>
                 </a>
@@ -59,50 +63,61 @@
         <div class="detalhes">
             <h2>Pensando em Você:</h2>
             <div class="conteudo">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptas magnam, similique id quibusdam corporis cumque, fuga natus iure culpa accusantium perferendis corrupti dolore facilis quia veniam incidunt nostrum sunt.</p>
-                <img src="imagens/jessica06-600.jpg" alt="Jessica de costas">
+                <p id="inverter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptas magnam, similique id quibusdam corporis cumque, fuga natus iure culpa accusantium perferendis corrupti dolore facilis quia veniam incidunt nostrum sunt.</p>
+                <img src="imagens/jessica06-600.jpg" alt="Jessica de costas" id="inverter">
             </div>
         </div>
 
-        <!--Titulos-->
+        <!--Juntando as partes-->
 
-        <div class="titulos">
-            <h1>Meus Objetivos:</h1>
-        </div>
+        <div class="junto">
 
-        <!--Meus Objetivos-->
+            <div id="esquerda">
 
-        <div class="meus-objetivos">
-            <div>
-                <h3>1°</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum odio alias facere ut nobis doloremque nisi itaque! Beatae ut nobis fuga a magnam provident, voluptatem quis amet. Nulla, necessitatibus unde?</p>
+                <!--Titulos-->
+
+                <div class="titulos">
+                    <h1>Meus Objetivos:</h1>
+                </div>
+
+                <!--Meus Objetivos-->
+
+                <div class="meus-objetivos">
+                    <div>
+                        <h3>1°</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum odio alias facere ut nobis doloremque nisi itaque! Beatae ut nobis fuga a magnam provident, voluptatem quis amet. Nulla, necessitatibus unde?</p>
+                    </div>
+                    <div>
+                        <h3>2°</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque perspiciatis ipsa commodi consequatur beatae id totam recusandae odio, reiciendis fuga reprehenderit aut iusto illo voluptatum. Corporis quibusdam dolor voluptas esse!</p>
+                    </div>
+                    <div>
+                        <h3>3°</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, doloribus sit maiores nostrum beatae vero consequuntur. Culpa deserunt repellendus atque quidem provident sunt, ut exercitationem inventore tempore, dolorum, quod vel!</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>2°</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque perspiciatis ipsa commodi consequatur beatae id totam recusandae odio, reiciendis fuga reprehenderit aut iusto illo voluptatum. Corporis quibusdam dolor voluptas esse!</p>
-            </div>
-            <div>
-                <h3>3°</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, doloribus sit maiores nostrum beatae vero consequuntur. Culpa deserunt repellendus atque quidem provident sunt, ut exercitationem inventore tempore, dolorum, quod vel!</p>
-            </div>
-        </div>
 
-        <!--Titulos-->
+            <div id="direita">
 
-        <div class="titulos" id="aumentar">
-            <h1>Seus Objetivos:</h1>
-        </div>
+                <!--Titulos-->
 
-        <!--Seus Objetivos-->
+                <div class="titulos" id="aumentar">
+                    <h1>Seus Objetivos:</h1>
+                </div>
 
-        <div class="seus-objetivos">
-            <div>
-                <h3>Hipertrofia:</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum tempora, esse assumenda deleniti, repellendus ducimus distinctio dolorem aspernatur dolor est fugit! Fuga nostrum ad voluptatum ea hic, numquam sunt eos.</p>
-            </div>
-            <div>
-                <h3>Emagrecimento:</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum eius nihil culpa qui reprehenderit ex sint delectus laboriosam id tenetur necessitatibus quaerat, possimus, sit magnam quis assumenda numquam quasi asperiores!</p>
+                <!--Seus Objetivos-->
+
+                <div class="seus-objetivos">
+                    <div>
+                        <h3>Hipertrofia:</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum tempora, esse assumenda deleniti, repellendus ducimus distinctio dolorem aspernatur dolor est fugit! Fuga nostrum ad voluptatum ea hic, numquam sunt eos.</p>
+                    </div>
+                    <div>
+                        <h3>Emagrecimento:</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum eius nihil culpa qui reprehenderit ex sint delectus laboriosam id tenetur necessitatibus quaerat, possimus, sit magnam quis assumenda numquam quasi asperiores!</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -121,13 +136,13 @@
                     <p>Siga meu Instagram</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="https://web.whatsapp.com/" target="_blank">
                 <div>
                     <img src="imagens/icone-wpp-100.png" alt="icone do wpp">
                     <p>Entre em contato pelo wpp</p>
                 </div>
             </a>
-            <a href="#">
+            <a href="https://workspace.google.com/intl/pt-BR/gmail/" target="_blank">
                 <div>
                     <img src="imagens/icone-email.webp" alt="icone do email">
                     <p>Me mande um e-mail</p>
