@@ -91,6 +91,7 @@ nav#menu li{
 
 nav#menu a{
     text-decoration: none;
+    border-radius: 10px 10px 0px 0px;
     color: white;
 }
 
@@ -103,12 +104,15 @@ nav#menu li:hover{
 /*Corpo*/
 
 main{
-    margin: 100px 20px;
+    margin: 100px auto;
     display: flex;
     flex-flow: column nowrap;
+    width: 300px;
     background-color: #33152249;
     box-shadow: inset 0px 0px 5px #c993ab5a;
     border-radius: 10px;
+    overflow: auto;
+    transition: width .3s;
 }
 
 main div.intro{
@@ -120,15 +124,17 @@ div.intro h1{
     font-family: 'titulo', Arial, Helvetica, sans-serif;
     color: var(--cor4);
     margin: 15px 0px;
+    transition: font-size .3s;
 }
 
 div.intro p{
     font-size: .8em;
     text-indent: 20px;
+    transition: font-size .3s;
 }
 
 main div.calculadora{
-    margin: 15px;
+    margin: 0px 15px 15px 15px;
 }
 
 /*Calculadora*/
@@ -152,4 +158,110 @@ legend{
 p#resultado{
     font-size: .9em;
     text-align: center;
+    transition: font-size .3s;
+    color: #ff0808;
+}
+
+/*Tabela*/
+
+table{
+    display: none;
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+table td, th{
+    border: 1px solid #331522;
+    text-align: center;
+    padding: 5px;
+    font-size: .8em;
+    transition: font-size .3s;
+}
+
+table th{
+    background-color: #33152286;
+}
+
+table caption{
+    font-size: 1em;
+    margin: 10px;
+    transition: font-size .3s;
+}
+
+
+/*Telas maiores*/
+
+@media screen and (min-width: 600px) {
+    
+    main{
+        width: 500px;
+        transition: width .3s;
+    }
+
+}
+
+
+@media screen and (min-width: 800px) {
+    
+    /*menu*/
+
+    nav#menu{
+        display: block;
+    }
+
+    nav#menu ul{
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        border: none;
+        list-style-type: none;
+        font-size: .9em;
+    }
+
+    nav#menu a{
+        flex: 1 1 180px;
+        margin: 0px 20px;
+    }
+
+    nav#menu li{
+        padding: 3px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    div#span{
+        display: none;
+    }
+
+    /*Tamanho do Conteudo*/
+
+    main{
+        width: 700px;
+        transition: width .3s;
+    }
+
+    div.intro h1{
+        font-size: 2.2em;
+        transition: font-size .3s;
+    }
+
+    div.intro p{
+        font-size: 1em;
+        text-indent: 20px;
+        transition: font-size .3s;
+    } 
+
+    p#resultado{
+        font-size: 1em;
+        text-align: center;
+        transition: font-size .3s;
+    }
+
+    table td, th{
+        font-size: .9em;
+        transition: font-size .3s;
+    }
+
+    table caption{
+        font-size: 1.1em;
+        transition: font-size .3s;
+    }
 }

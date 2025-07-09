@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilos/extra.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+<body oresize="clicou">
     <header>
 
         <!--Cabeçalho-->
@@ -28,7 +28,7 @@
                 <a href="#">
                     <li>Minha História</li>
                 </a>
-                <a href="#" style="background-color: #331522; text-shadow: 0px 0px 2px white;">
+                <a href="#" style="background-color: #33152288; text-shadow: 0px 0px 2px white;">
                     <li>Calculo de IMC</li>
                 </a>
                 <a href="#">
@@ -41,7 +41,7 @@
     <main>
         <div class="intro">
             <h1>Calcule seu IMC:</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus enim laborum sequi adipisci. Dignissimos nisi ullam esse alias, ipsam maxime officiis ipsa cupiditate vero, illum mollitia aliquid totam dolorum tempora.</p>
+            <p>IMC é a sigla para Índice de Massa Corporal. Ele serve para saber se o peso de uma pessoa está adequado em relação à sua altura.</p>
         </div>
         <div class="calculadora">
             <form autocomplete="off" method="post">
@@ -64,6 +64,37 @@
                 </fieldset>
             </form>
         </div>
+        <table id="tabela">
+            <caption>Tabela de Classificação do IMC</caption>
+            <tr>
+                <th scope="col">Faixa de IMC</th>
+                <th scope="col">Classificação</th>
+            </tr>
+            <tr>
+                <td>Menor que 18.5</td>
+                <td>Abaixo do peso</td>
+            </tr>
+            <tr>
+                <td>18.5 - 24.9</td>
+                <td>Peso Normal</td>
+            </tr>
+            <tr>
+                <td>25.0 - 29.9</td>
+                <td>Peso Sobrepeso</td>
+            </tr>
+            <tr>
+                <td>30.0 - 34.9</td>
+                <td>Obesidade Grau 1</td>
+            </tr>
+            <tr>
+                <td>35.0 - 39.9</td>
+                <td>Obesidade Grau 2</td>
+            </tr>
+            <tr>
+                <td>Maior ou igual a 40</td>
+                <td>Obesidade Grau 3</td>
+            </tr>
+        </table>
     </main>
 
     <script>
@@ -76,6 +107,7 @@
         }
 
         function calcular(){
+            tabela.style.display='table'
             const p = parseFloat(document.getElementById("ipeso").value)
             const a = parseFloat(document.getElementById("ialtura").value)
             var r = p / a**2
@@ -83,6 +115,7 @@
 
             if (isNaN(p) || isNaN(a) || p == 0 || a == 0){
                 document.getElementById("resultado").textContent = `Digite um valor Válido!`
+                tabela.style.display='none'
             } else if (r < 18.5) {
                 document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está abaixo  do peso.`
             } else if (r < 24.9) {
