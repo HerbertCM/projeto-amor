@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule seu IMC</title>
+    <link rel="stylesheet" href="estilos/extra.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header>
+
+        <!--Cabeçalho-->
+
+        <div id="marca">
+            <h1>Jessica Karine</h1>
+            <p>Personal Trainer</p>
+        </div>
+        <div id="span" onclick="clicou()"><span class="material-symbols-outlined">Dehaze</span></div>
+
+        <!--Menu-->
+
+        <nav id="menu">
+            <ul>
+                <a href="../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Minha História</li>
+                </a>
+                <a href="#" style="background-color: #331522; text-shadow: 0px 0px 2px white;">
+                    <li>Calculo de IMC</li>
+                </a>
+                <a href="#">
+                    <li>Anamnese</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h1>Calcule seu IMC:</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus enim laborum sequi adipisci. Dignissimos nisi ullam esse alias, ipsam maxime officiis ipsa cupiditate vero, illum mollitia aliquid totam dolorum tempora.</p>
+        </div>
+        <div class="calculadora">
+            <form autocomplete="off" method="post">
+                <fieldset>
+                    <legend>IMC</legend>
+                    <label for="ipeso">
+                        <p>Peso(kg):</p>
+                    </label>
+                    <input type="number" name="peso" id="ipeso" placeholder="Seu peso" required>
+
+                    <label for="ialtura">
+                        <p>Altura(m):</p>
+                    </label>
+                    <input type="number" name="altura" id="ialtura" placeholder="Sua Altura" required><br>
+
+                    <input type="button" value="Calcular" id="calcular'" onclick="calcular()">
+                    <input type="reset" value="Limpar" id="limpar">
+
+                    <p id="resultado"></p>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function clicou(){
+            if(menu.style.display=='block'){
+                menu.style.display='none'
+            } else {
+                menu.style.display='block'
+            }
+        }
+
+        function calcular(){
+            const p = parseFloat(document.getElementById("ipeso").value)
+            const a = parseFloat(document.getElementById("ialtura").value)
+            var r = p / a**2
+
+
+            if (isNaN(p) || isNaN(a) || p == 0 || a == 0){
+                document.getElementById("resultado").textContent = `Digite um valor Válido!`
+            } else if (r < 18.5) {
+                document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está abaixo  do peso.`
+            } else if (r < 24.9) {
+                document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, seu peso está normal`
+            } else if (r < 29.9){
+                document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está com sobrepeso`
+            } else if (r < 34.9){
+                document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está com obesidade grau 1`
+            } else if (r < 39.9){
+                document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está com obesidade grau 2`
+            } else {
+                document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está com obesidade grau 3`
+            }
+        }
+    </script>
+</body>
+</html>
