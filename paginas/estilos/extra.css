@@ -188,6 +188,26 @@ table caption{
     transition: font-size .3s;
 }
 
+/*Anamnese*/
+
+form.anamnese{
+    background-color: white;
+    color: black;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+form.anamnese h3{
+    margin: 20px 5px;
+}
+
+form.anamnese textarea{
+    display: block;
+    margin: auto;
+}
+
+form.a
+
 
 /*Telas maiores*/
 

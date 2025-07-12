@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anamnese</title>
+    <link rel="stylesheet" href="estilos/extra.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body onresize="clicou">
+    <header>
+
+        <!--Cabeçalho-->
+
+        <div id="marca">
+            <h1>Jessica Karine</h1>
+            <p>Personal Trainer</p>
+        </div>
+        <div id="span" onclick="clicou()"><span class="material-symbols-outlined">Dehaze</span></div>
+
+        <!--Menu-->
+
+        <nav id="menu">
+            <ul>
+                <a href="../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Minha História</li>
+                </a>
+                <a href="imc.html">
+                    <li>Calculo de IMC</li>
+                </a>
+                <a href="#" style="background-color: #33152288; text-shadow: 0px 0px 2px white;">
+                    <li>Anamnese</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h1>Ola</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita magni aspernatur, at sit esse dicta praesentium quis quae perferendis tenetur veritatis asperiores nemo ullam dolorum, dolore illum error, mollitia omnis!</p>
+        </div>
+
+
+        <!--Anamnese-->
+
+        <form action="" class="anamnese">
+            <h3>1-Objetivo Principal:</h3>
+            <label for="objetivo"><p>O que você busca com a nutrição?</p></label>
+            <textarea name="objetivo" id="iobjetivo" cols="35" rows="2"></textarea>
+
+            <h3>2-Rotina</h3>
+            <label for="irotina"><p>Qual sua profissão e como é seu  dia a dia?</p></label>
+            <textarea name="rotina" id="irotina" cols="35" rows="2"></textarea>
+
+            <p>Faz atividade física?</p>
+            <input type="radio" name="rotina" id="irotina2">
+            <label for="irotina2">Sim</label>
+            <input type="radio" name="rotina" id="irotina3" checked>
+            <label for="irotina3">Não</label>
+            <label for="i1"><p>Qual e quantas vezes por semana?</p></label>
+            <textarea name="1" id="i1" cols="35" rows="2"></textarea>
+
+            <h3>3-Saúde:</h3>
+            <p>Tem algum problema de saúde?</p>
+            <input type="radio" name="saude" id="isaude">
+            <label for="isaude">Sim</label>
+            <input type="radio" name="saude" id="isaude2" checked>
+            <label for="isaude2">Não</label>
+
+            <p>Usa medicamentos ou suplementos?</p>
+            <input type="radio" name="medicamento" id="imedicamento">
+            <label for="imedicamento">Sim</label>
+            <input type="radio" name="medicamento" id="imedicamento2" checked>
+            <label for="imedicamento2">Não</label>
+
+            <h3>4-Alimentação</h3>
+            <label for="iprofissão"><p>Qual sua profissão e como é seu  dia a dia?</p></label>
+            <textarea name="profissão" id="iprofissão" cols="35" rows="2"></textarea>
+
+            <p>Tem horaios fixos para comer?</p>
+            <input type="radio" name="refeiçao" id="irefeiçao">
+            <label for="irefeiçao">Sim</label>
+            <input type="radio" name="refeiçao" id="irefeiçao2" checked>
+            <label for="irefeiçao2">Não</label>
+
+            <p>Tem alguma restrição alérgica ou intolerância?</p>
+            <input type="radio" name="restriçao" id="irestriçao">
+            <label for="irestriçao">Sim</label>
+            <input type="radio" name="restriçao" id="irestriçao2" checked>
+            <label for="irestriçao2">Não</label>
+
+            <label for="inaogosta"><p>O que não gosta de jeito nenhum?</p></label>
+            <textarea name="naogosta" id="inaogosta" cols="35" rows="2"></textarea>
+
+            <label for="igosta"><p>Qual alimento que ama e não vive sem?</p></label>
+            <textarea name="gosta" id="igosta" cols="35" rows="2"></textarea>
+
+            <h3>5-Comportamento alimentas:</h3>
+            <p>Já fez dieta?</p>
+            <input type="radio" name="dieta" id="idieta">
+            <label for="idieta">Sim</label>
+            <input type="radio" name="dieta" id="idieta2" checked>
+            <label for="idieta2">Não</label>
+
+            <label for="icomo"><p>Como foi?</p></label>
+            <textarea name="como" id="icomo" cols="35" rows="2"></textarea>
+
+            <p>Sente compulsão por comida?</p>
+            <input type="radio" name="compulsao" id="icompulsao">
+            <label for="icompulsao">Sim</label>
+            <input type="radio" name="compulsao" id="icompulsao2" checked>
+            <label for="icompulsao2">Não</label>
+
+            <p>Costuma beliscar ou pular refeições?</p>
+            <input type="radio" name="pular" id="ipular">
+            <label for="ipular">Sim</label>
+            <input type="radio" name="pular" id="ipular2" checked>
+            <label for="ipular2">Não</label>
+
+            <h3>Hidratação, sono e estresse:</h3>
+
+            <p>Bebe bastante água?</p>
+            <input type="radio" name="agua" id="iagua">
+            <label for="iagua">Sim</label>
+            <input type="radio" name="agua" id="iagua2" checked>
+            <label for="iagua2">Não</label>
+
+            <label for="isono"><p>Como é seu sono?</p></label>
+            <textarea name="sono" id="isono" cols="35" rows="2"></textarea>
+
+            <p>Se sente muito estressado(a) ou ansioso(a)?</p>
+            <input type="radio" name="ansioso" id="iansioso">
+            <label for="iansioso">Sim</label>
+            <input type="radio" name="ansioso" id="iansioso2" checked>
+            <label for="iansioso2">Não</label><br>
+
+            <input type="button" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </main>
+
+    <script>
+        function clicou(){
+            if(menu.style.display=='block'){
+                menu.style.display='none'
+            } else {
+                menu.style.display='block'
+            }
+        }
+    </script>
+</body>
+</html>
