@@ -31,13 +31,15 @@ body{
 /*Cabeçalho*/
 
 header{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.442);
     box-shadow: 0px 5px 5px var(--cor4);
     border-bottom: 1px solid var(--cor0);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 header div#marca{ 
