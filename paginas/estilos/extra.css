@@ -233,6 +233,10 @@ form.anamnese textarea{
     margin-left: 5px;
 }
 
+textarea{
+    width: 200px;
+}
+
 /*Perguntas do sim*/
 
 div#i1div{
