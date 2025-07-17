@@ -208,7 +208,31 @@ form.anamnese textarea{
     margin: auto;
 }
 
-form.a
+/*Perguntas do sim*/
+
+div#i1div{
+    display: none;
+}
+
+div#saudediv{
+    display: none;
+}
+
+div#medicamentodiv{
+    display: none;
+}
+
+div#refeiçaodiv{
+    display: none;
+}
+
+div#restriçaodiv{
+    display: none;
+}
+
+div#dietadiv{
+    display: none;
+}
 
 
 /*Telas maiores*/
