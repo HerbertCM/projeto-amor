@@ -48,6 +48,13 @@
         <!--Anamnese-->
 
         <form action="" class="anamnese">
+            <h3 style="margin-top: 0px; border-radius: 10px 10px 0px 0px;">Dados basicos:</h3>
+            <label for="inome"><p>Nome Completo:</p></label>
+            <input type="text" name="nome" id="inome" required maxlength="30" minlength="5" placeholder="Seu Nome">
+
+            <label for="iidade"><p>Idade:</p></label>
+            <input type="number" name="idade" id="iidade" required min="1" max="150">
+
             <h3>1-Objetivo Principal:</h3>
             <label for="objetivo"><p>O que você busca com a nutrição?</p></label>
             <textarea name="objetivo" id="iobjetivo" cols="35" rows="2"></textarea>
@@ -163,8 +170,10 @@
             <input type="radio" name="ansioso" id="iansioso2" checked value="nao">
             <label for="iansioso2">Não</label><br>
 
-            <input type="button" value="Enviar" onclick="enviarWhatsApp()">
-            <input type="reset" value="Limpar">
+            <div id="botao">
+                <input type="button" value="Enviar" onclick="enviarWhatsApp()">
+                <input type="reset" value="Limpar">
+            </div>
         </form>
     </main>
 
@@ -224,6 +233,9 @@
         /*Enviar para wpp*/
 
         function enviarWhatsApp() {
+            const nome = document.getElementById("inome").value;
+            const idade = document.getElementById("iidade").value
+
             const objetivo = document.getElementById("iobjetivo").value;
             const rotina = document.getElementById("irotina").value;
             const rotinasn = document.querySelector('input[name="rotinasn"]:checked')?.value;
@@ -259,20 +271,10 @@
 
             // Mensagem formatada
             const mensagem = 
-                `*Formulário de Anamnese:*\n
-                *1. Objetivo:* ${objetivo}\n
-                *2. Rotina:* ${rotina}\nFaz atividade física? ${rotinasn}\nQual e quantas vezes? ${i1}\n
-                *3. Saúde:* Tem problema de saúde? ${saude}\nQual? ${saudequal}\n
-                Usa medicamentos? ${medicamento}\nQual? ${medicamentoqual}\n
-                *4. Alimentação:* ${profissão}\nTem horários fixos? ${refeiçao}\nQuais? ${refeiçaoqual}\n
-                Tem restrição? ${restriçao}\nQual? ${restriçaoqual}\n
-                Não gosta de: ${naogosta}\nAma: ${gosta}\n
-                *5. Comportamento Alimentar:* Já fez dieta? ${dieta}\nComo foi? ${como}\n
-                Sente compulsão? ${compulsao}\nPula refeições? ${pular}\n
-                *6. Hidratação, Sono e Estresse:* Bebe água? ${agua}\nSono: ${sono}\nAnsioso(a)? ${ansioso}`;
+                `*Formulário de Anamnese:*\nNome: ${nome}\nIdade: ${idade}\n*1-Objetivo:*\nO que você busca com a nutrição? \n->${objetivo}\n*2-Rotina:*\nQual sua profissão e como é seu dia a dia?\n->${rotina}\nFaz atividade física?${rotinasn}\nQual e quantas vezes?\n->${i1}\n*3-Saúde:*\nTem algum problema de saúde?${saude}\n->Qual?\n${saudequal}\nUsa medicamentos ou suplementos?${medicamento}\nQual?\n->${medicamentoqual}\n*4-Alimentação:*\nQual sua profissão e como é seu dia a dia?\n->${profissão}\nTem horários fixos para comer?${refeiçao}\nQuais?\n->${refeiçaoqual}\nTem alguma restrição alérgica ou intolerância?${restriçao}\nQual?\n->${restriçaoqual}\nO que não gosta de jeito nenhum?\n->${naogosta}\nQual alimento que ama e não vive sem?\n->${gosta}\n*5-Comportamento Alimentar:*\nJá fez dieta?${dieta}\nComo foi?\n->${como}\nSente compulsão por comida?${compulsao}\nCostuma beliscar ou pular refeições?${pular}\n*6-Hidratação, Sono e Estresse:*\nBebe bastante água?${agua}\nComo é seu sono?\n->${sono}\nSe sente muito estressado(a) ou ansioso(a)?${ansioso}`;
 
             const textoCodificado = encodeURIComponent(mensagem);
-            const numero = "5527997163033";
+            const numero = "5527998125830";
             const url = `https://wa.me/${numero}?text=${textoCodificado}`;
             window.open(url, '_blank')
         }
