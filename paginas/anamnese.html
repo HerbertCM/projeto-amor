@@ -96,6 +96,9 @@
 
             <h3>4-Alimentação</h3>
 
+            <label for="ilongodia"><p>Como são suas refeições ao longo do dia?</p></label>
+            <textarea name="longodia" id="ilongodia" cols="35" rows="2"></textarea>
+
             <p>Tem horaios fixos para comer?</p>
             <input type="radio" name="refeiçao" id="irefeiçao" onclick="refeiçaosim()" value="sim">
             <label for="irefeiçao">Sim</label>
@@ -242,7 +245,7 @@
             const medicamento = document.querySelector('input[name="medicamento"]:checked')?.value;
             const medicamentoqual = document.getElementById("imedicamentoqual").value;
 
-            const profissão = document.getElementById("iprofissão").value;
+            const longodia = document.getElementById("ilongodia").value;
 
             const refeiçao = document.querySelector('input[name="refeiçao"]:checked')?.value;
             const refeiçaoqual = document.getElementById("irefeiçaoqual").value;
@@ -266,7 +269,7 @@
 
             // Mensagem formatada
             const mensagem = 
-                `*Formulário de Anamnese:*\nNome: ${nome}\nIdade: ${idade}\n*1-Objetivo:*\nO que você busca com a nutrição? \n->${objetivo}\n*2-Rotina:*\nQual sua profissão e como é seu dia a dia?\n->${rotina}\nFaz atividade física?${rotinasn}\nQual e quantas vezes?\n->${i1}\n*3-Saúde:*\nTem algum problema de saúde?${saude}\n->Qual?\n${saudequal}\nUsa medicamentos ou suplementos?${medicamento}\nQual?\n->${medicamentoqual}\n*4-Alimentação:*\nTem horários fixos para comer?${refeiçao}\nQuais?\n->${refeiçaoqual}\nTem alguma restrição alérgica ou intolerância?${restriçao}\nQual?\n->${restriçaoqual}\nO que não gosta de jeito nenhum?\n->${naogosta}\nQual alimento que ama e não vive sem?\n->${gosta}\n*5-Comportamento Alimentar:*\nJá fez dieta?${dieta}\nComo foi?\n->${como}\nSente compulsão por comida?${compulsao}\nCostuma beliscar ou pular refeições?${pular}\n*6-Hidratação, Sono e Estresse:*\nBebe bastante água?${agua}\nComo é seu sono?\n->${sono}\nSe sente muito estressado(a) ou ansioso(a)?${ansioso}`;
+                `*Formulário de Anamnese:*\nNome: ${nome}\nIdade: ${idade}\n*1-Objetivo:*\nO que você busca com a nutrição? \n->${objetivo}\n*2-Rotina:*\nQual sua profissão e como é seu dia a dia?\n->${rotina}\nFaz atividade física?${rotinasn}\nQual e quantas vezes?\n->${i1}\n*3-Saúde:*\nTem algum problema de saúde?${saude}\nQual?\n->${saudequal}\nUsa medicamentos ou suplementos?${medicamento}\nQual?\n->${medicamentoqual}\n*4-Alimentação:*\nComo são suas refeições ao longo do dia?\n->${longodia}\nTem horários fixos para comer?${refeiçao}\nQuais?\n->${refeiçaoqual}\nTem alguma restrição alérgica ou intolerância?${restriçao}\nQual?\n->${restriçaoqual}\nO que não gosta de jeito nenhum?\n->${naogosta}\nQual alimento que ama e não vive sem?\n->${gosta}\n*5-Comportamento Alimentar:*\nJá fez dieta?${dieta}\nComo foi?\n->${como}\nSente compulsão por comida?${compulsao}\nCostuma beliscar ou pular refeições?${pular}\n*6-Hidratação, Sono e Estresse:*\nBebe bastante água?${agua}\nComo é seu sono?\n->${sono}\nSe sente muito estressado(a) ou ansioso(a)?${ansioso}`;
 
             const textoCodificado = encodeURIComponent(mensagem);
             const numero = "5527998125830";
