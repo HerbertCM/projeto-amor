@@ -31,7 +31,7 @@ body{
 /*Cabeçalho*/
 
 header{
-    background-color: rgba(0, 0, 0, 0.442);
+    background-color: rgba(0, 0, 0, 0.755);
     box-shadow: 0px 5px 5px var(--cor4);
     border-bottom: 1px solid var(--cor0);
     display: flex;
@@ -40,6 +40,7 @@ header{
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 header div#marca{ 
@@ -88,7 +89,7 @@ nav#menu li{
     text-align: center;
     padding: 8px;
     border: 1px solid var(--cor0);
-    background-color: #33152272;
+    background-color: #33152240;
 }
 
 nav#menu a{
@@ -333,6 +334,19 @@ footer{
 footer p{
     text-align: center;
     font-size: .6em;
+}
+
+/*Animações*/
+
+.animacao{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animacao.active{
+    opacity: 1;
+    transform: translatey(0);
 }
 
 /*Tablets*/

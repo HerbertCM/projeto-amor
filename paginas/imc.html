@@ -115,16 +115,22 @@
                 tabela.style.display='none'
             } else if (r < 18.5) {
                 document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está abaixo  do peso.`
+                resultado.style.color="yellow"
             } else if (r < 24.9) {
                 document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, seu peso está normal`
+                resultado.style.color="green"
             } else if (r < 29.9){
                 document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está com sobrepeso`
+                resultado.style.color="yellow"
             } else if (r < 34.9){
                 document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está com obesidade grau 1`
+                resultado.style.color="red"
             } else if (r < 39.9){
                 document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está com obesidade grau 2`
+                resultado.style.color="red"
             } else {
                 document.getElementById("resultado").textContent = `Seu IMC é ${r.toFixed(2)}, você está com obesidade grau 3`
+                resultado.style.color="red"
             }
         }
     </script>

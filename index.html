@@ -47,7 +47,7 @@
 
         <!--Corpo Sobre Mim-->
 
-        <div class="detalhes">
+        <div class="detalhes animacao">
             <h2>Sobre Mim:</h2>
             <div class="conteudo">
                 <p>Sou Educadora Física, apaixonada por movimento, saúde e bem-estar. Atuo com foco em ajudar pessoas a conquistarem uma vida mais saudável através de treinos personalizados e estratégias realistas que se encaixam na rotina de cada um. Estou em fase final da graduação em Nutrição, e toda orientação alimentar que ofereço é desenvolvida em parceria com uma equipe de nutricionistas, garantindo segurança e responsabilidade em cada plano.</p>
@@ -57,7 +57,7 @@
 
         <!--Corpo Pensando em você-->
 
-        <div class="detalhes">
+        <div class="detalhes animacao">
             <h2>Pensando em Você:</h2>
             <div class="conteudo">
                 <p id="inverter">Cada pessoa é única — por isso, meus acompanhamentos são pensados para se encaixar na sua rotina, nos seus gostos e no que você realmente precisa. Nada de fórmulas prontas: aqui, o foco é você, com saúde de verdade e resultados que fazem sentido pra sua vida.</p>
@@ -69,7 +69,7 @@
 
         <div class="junto">
 
-            <div id="esquerda">
+            <div id="esquerda" class="animacao">
 
                 <!--Titulos-->
 
@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div id="direita">
+            <div id="direita" class="animacao">
 
                 <!--Titulos-->
 
@@ -120,13 +120,13 @@
 
         <!--Titulos-->
 
-        <div class="titulos" id="aumentar">
+        <div class="titulos animacao" id="aumentar">
             <h1>Contatos:</h1>
         </div>
 
         <!--Contatos-->
 
-        <div class="contatos">
+        <div class="contatos animacao" id="animacao">
             <a href="https://www.instagram.com/jessicaadley_/#" target="_blank">
                 <div>
                     <img src="imagens/icone-instagram-100.png" alt="icone do instagram">
@@ -161,6 +161,24 @@
                 menu.style.display='block'
             }
         }
+
+        /*Animação*/
+
+        function revealOnScroll(){
+            const elements = document.querySelectorAll('.animacao');
+            const windowHeight = window.innerHeight;
+
+            elements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+
+                if (elementTop < windowHeight - 200){
+                    el.classList.add('active');
+                }
+            })
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
     </script>
 </body>
 </html>
